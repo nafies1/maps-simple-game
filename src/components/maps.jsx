@@ -18,10 +18,6 @@ class SimpleMap extends Component {
     // console.log(event);
   }
 
-  addMaps(event) {
-    console.log(event);
-  }
-
   createMapOptions() {
     return {
       featureType: "all",
@@ -37,14 +33,14 @@ class SimpleMap extends Component {
   render() {
     return (
       // Important! Always set the container height explicitly
-      <div style={{ height: "100vh", width: "100%" }}>
+      <div style={{ height: "80vh", width: "100%" }}>
         <GoogleMapReact
-          bootstrapURLKeys={{ key: process.env.RREACT_APP_API_KEY }}
+          bootstrapURLKeys={{ key: process.env.REACT_APP_API_KEY }}
           defaultCenter={this.props.center}
           defaultZoom={this.props.zoom}
           distanceToMouse={this.checkMap}
           options={this.createMapOptions()}
-          onClick={this.addMaps}>
+          onClick={this.props.addMaps}>
           <AnyReactComponent lat={59.955413} lng={30.337844} text='My Marker' />
         </GoogleMapReact>
       </div>
