@@ -4,6 +4,6 @@ export const getDistance = (origin, destination) => {
   // https://cors-anywhere.herokuapp.com/ is for resolving cors problem
   return axios({
     method: 'get',
-    url: `https://cors-anywhere.herokuapp.com/https://maps.googleapis.com/maps/api/distancematrix/json?origins=${origin}&destinations=${destination}&key=${process.env.REACT_APP_API_KEY}`,
+    url: `https://cors-anywhere.herokuapp.com/https://maps.googleapis.com/maps/api/distancematrix/json?origins=${origin}&destinations=${destination}&key=${process.env.REACT_APP_API_KEY}`
   })
 }
