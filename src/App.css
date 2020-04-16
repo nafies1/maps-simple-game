@@ -25,7 +25,15 @@
 }
 
 .App-link {
-  color: #61dafb;
+  /* color: #61dafb; */
+  color: red;
+}
+
+.red-dot {
+  height: 1.5rem;
+  width: 1.5rem;
+  background-color: red;
+  border-radius: 50px;
 }
 
 @keyframes App-logo-spin {

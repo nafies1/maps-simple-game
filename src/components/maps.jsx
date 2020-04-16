@@ -1,9 +1,14 @@
-/** @format */
-
 import React, { Component } from "react";
 import GoogleMapReact from "google-map-react";
 
-const AnyReactComponent = ({ text }) => <h1>{text}</h1>;
+const AnyReactComponent = ({ text }) => {
+  return (
+    <>
+      <div className='red-dot'></div>
+      <h3 className='App-link'>{text}</h3>
+    </>
+  )
+};
 
 class SimpleMap extends Component {
   static defaultProps = {
@@ -41,7 +46,7 @@ class SimpleMap extends Component {
           distanceToMouse={this.checkMap}
           options={this.createMapOptions()}
           onClick={this.props.addMaps}>
-          <AnyReactComponent lat={59.955413} lng={30.337844} text='My Marker' />
+          <AnyReactComponent lat={this.props.lat || 59.955413} lng={this.props.lng || 30.337844} text={this.props.text || 'my-markers'} />
         </GoogleMapReact>
       </div>
     );
