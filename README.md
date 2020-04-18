@@ -1,3 +1,8 @@
+# FIND CITY IN MAPS -Simple Game-
+
+Game's URL : `https://find-city-simple-game.firebaseapp.com/`
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
